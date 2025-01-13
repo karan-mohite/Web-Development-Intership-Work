@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1 style="color: red;">Counter: <span id="counter">0</span></h1>
+    <button id="increaseButton">Increase Counter</button>
+    <button id="decreaseButton">Decrease Counter</button>
+    <button id="Reset">Reset</button>
+ </body>
+<script>
+ const button1 = document.getElementById('increaseButton');
+ const button = document.getElementById('decreaseButton');
+ const button3 = document.getElementById('Reset');
+const counterDisplay = document.getElementById('counter');
+
+ let counter = 0;
+
+ button1.addEventListener('click', function() {
+    counter++;
+     counterDisplay.textContent = counter;
+});
+button.addEventListener('click', function() {
+    counter--;
+     counterDisplay.textContent = counter;
+});
+button3.addEventListener('click', function() {
+     counterDisplay.textContent = "0";
+}); 
+</script>
+</html>

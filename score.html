@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Question Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+    }
+    .quiz-container {
+      width: 60%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+      font-weight: bolder;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="color: white;">5 Question Quiz</h1>
+
+  <div class="quiz-container">
+     <div class="question">
+      <p style="font-weight: bold;">1. What is the capital of Japan?</p>
+      <button class="button" onclick="answerQuestion(1, 'Tokyo')">Tokyo</button>
+      <button class="button" onclick="answerQuestion(1, 'Osaka')">Osaka</button>
+      <button class="button" onclick="answerQuestion(1, 'Kyoto')">Kyoto</button>
+    </div>
+
+ 
+    <div class="question">
+      <p style="font-weight: bold;">2. What is 10 + 5?</p>
+      <button class="button" onclick="answerQuestion(2, 15)">15</button>
+      <button class="button" onclick="answerQuestion(2, 10)">10</button>
+      <button class="button" onclick="answerQuestion(2, 20)">20</button>
+    </div>
+
+ 
+    <div class="question">
+      <p style="font-weight: bold;">3. Who wrote "Harry Potter"?</p>
+      <button class="button" onclick="answerQuestion(3, 'J.K. Rowling')">J.K. Rowling</button>
+      <button class="button" onclick="answerQuestion(3, 'George R.R. Martin')">George R.R. Martin</button>
+      <button class="button" onclick="answerQuestion(3, 'J.R.R. Tolkien')">J.R.R. Tolkien</button>
+    </div>
+
+ 
+    <div class="question">
+      <p style="font-weight: bold;">4. What is the square root of 64?</p>
+      <button class="button" onclick="answerQuestion(4, 8)">8</button>
+      <button class="button" onclick="answerQuestion(4, 7)">7</button>
+      <button class="button" onclick="answerQuestion(4, 6)">6</button>
+    </div>
+
+   
+    <div class="question">
+      <p style="font-weight: bold;">5. What is the largest ocean on Earth?</p>
+      <button class="button" onclick="answerQuestion(5, 'Pacific Ocean')">Pacific Ocean</button>
+      <button class="button" onclick="answerQuestion(5, 'Atlantic Ocean')">Atlantic Ocean</button>
+      <button class="button" onclick="answerQuestion(5, 'Indian Ocean')">Indian Ocean</button>
+    </div>
+
+ 
+    <div class="result">
+      <p style="color: orangered;">Your Score: <span id="score">0</span>/5</p>
+    </div>
+  </div>
+
+  <script>
+    let score = 0;
+
+    function answerQuestion(questionNumber, answer) {
+ 
+      const correctAnswers = {
+        1: 'Tokyo',
+        2: 15,
+        3: 'J.K. Rowling',
+        4: 8,
+        5: 'Pacific Ocean'
+      };
+
+ 
+      if (answer === correctAnswers[questionNumber]) {
+        score++;
+      }
+
+     
+      document.getElementById('score').textContent = score;
+    }
+  </script>
+
+</body>
+</html>

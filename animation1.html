@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #3498db;
+      border-radius: 10px;
+      animation: moveBox 4s infinite ease-in-out;
+    }
+
+    @keyframes moveBox {
+      0% {
+        transform: translateX(0) translateY(0);
+        background: #3498db;
+      }
+      25% {
+        transform: translateX(200px);
+        background: #2ecc71;
+      }
+      50% {
+        transform: translateX(200px) translateY(200px);
+        background: #e74c3c;
+      }
+      75% {
+        transform: translateX(0px) translateY(200px);
+        background: #9b59b6;
+      }
+      100% {
+        transform: translateX(0) translateY(0);
+        background: #3498db;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
+</body>
+</html>

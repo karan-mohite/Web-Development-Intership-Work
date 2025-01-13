@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Computer Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+h2, h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+    text-align: center;
+}
+
+#about p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #e0e0e0;
+    padding: 40px 0;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+.skill h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 16px;
+}
+
+/* Education Section */
+#education {
+    background-color: #fff;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+/* Certificates Section */
+#certificates {
+    background-color: #f9f9f9;
+}
+
+.certificate {
+    margin-bottom: 20px;
+}
+
+.certificate h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #fff;
+}
+
+.project-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact Form */
+#contact {
+    background-color: #e0e0e0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #00bcd4;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+    </style>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>John Doe</h1>
+                <p>Computer Engineer</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Hi! I'm John Doe, a passionate Computer Engineer with a strong background in software development, hardware design, and systems engineering. I specialize in building innovative solutions that bridge the gap between software and hardware.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Tools & Frameworks</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>Linux</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science in Computer Engineering</h3>
+                <p>XYZ University - 2020</p>
+                <p>GPA: 3.8/4.0</p>
+            </div>
+            <div class="education-item">
+                <h3>Master of Science in Computer Engineering</h3>
+                <p>XYZ University - 2022</p>
+                <p>GPA: 3.9/4.0</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="certificate">
+                <h3>Certified Kubernetes Administrator</h3>
+                <p>Issued by Linux Foundation - 2023</p>
+            </div>
+            <div class="certificate">
+                <h3>Oracle Certified Java Programmer</h3>
+                <p>Issued by Oracle - 2021</p>
+            </div>
+            <div class="certificate">
+                <h3>Machine Learning Specialization</h3>
+                <p>Issued by Coursera - 2022</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Project 1: IoT Smart Home System</h3>
+                <p>A project that involves automating home appliances using IoT technologies, integrating sensors, and building custom software solutions for a smart home environment.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2: AI-Based Chatbot</h3>
+                <p>Developed an AI-powered chatbot using natural language processing and machine learning techniques to answer customer inquiries and perform specific tasks.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3: Autonomous Navigation Robot</h3>
+                <p>A robot that autonomously navigates and avoids obstacles using sensor-based algorithms and machine learning to make real-time decisions for efficient path planning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 John Doe. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Simulate sending an email or message
+    alert(`Thank you for your message, ${name}! We'll get back to you at ${email}.`);
+
+    // Reset the form
+    document.getElementById("contact-form").reset();
+});
+
+    </script>
+</body>
+</html>

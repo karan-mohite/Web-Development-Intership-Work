@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .sidebar{
+            height: 700px;
+            width: 400px;
+            background-color: gray;
+        }
+       /* @media screen and(max-width:300px){
+            .sidebar{
+                background-color: brown;
+            }
+        }
+        @media screen and (max-width:200px)
+        {
+            .sidebar{
+                background-color: aqua;
+            }
+        }
+        @media screen and (max-width:100px)
+        {
+            .sidebar{
+                background-color: purple;
+            }
+        }*/
+        .ham{
+            height: 4px;
+            width: 30px;
+            background-color: black;
+            margin-top: 10px;
+        }
+        .ham div{
+            margin-top: 10px 0;
+            height: 4px;
+            width: 30px;
+            margin-bottom: 10px;
+            background-color: black;
+        }
+        .body{
+            display: flex;
+        }
+        .main{
+            display: flex;
+        }
+        @media screen and (max-width:720px){
+            .sidebar{
+                display: none;
+            }
+            .ham{
+                display: block;
+            }
+        }
+    </style>   
+    </div>
+    <div class="main">
+        <div class="sidebar">   
+         </div>
+        <div class="ham">
+           <div></div>
+           <div></div>
+           <div></div>
+        </div>        
+    </div>
+</body>
+</html>
